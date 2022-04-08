@@ -1,0 +1,98 @@
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{background-color:antiquewhite;}
+p, div, nav, section{
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bold;
+}
+.title{
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-weight: bold;
+    margin: 10px;
+    margin-bottom: 10px;
+    text-align:left;
+}
+.button{
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px 10px;
+    color: black;
+    background-color:aliceblue;
+    width: 60px;
+    height: 30px;
+    font-weight: 600;
+    border: 1em;
+    text-align: center;
+} 
+.button2{
+    font-size: 0.8em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    width: 60px;
+    height: 30px;
+    font-weight: 600;
+    border: 1em;
+    text-align: center;
+    padding: 5px 10px;
+    border: 1em;
+    text-align: center;
+    background-color: aliceblue;
+}  
+.border{
+    width: 1020px;
+    background: white;
+    margin : 0 auto  
+}
+.textmoving{
+    position: relative;
+    animation-name: movingtext;
+    animation-duration: 2s;
+}
+
+@keyframes movingtext{
+    0%{left: 1020px;}
+    100%{left:0px;}
+
+}
+img {
+    margin-left: 130px;
+    margin-top: 125px;
+    transition: transform 2s;
+}
+img:hover{
+    transform: rotate(360deg) ;
+}
+
+.img2:hover{
+    transform: scale(2,2);
+
+}
+
+
+.divleft{
+    background-color: white;
+    border-color: black;
+    width: 50%;
+    height: 500px;
+    border: 1px solid black;
+    float: left;
+    box-sizing: border-box;
+
+   }
+.divright{
+    background-color: white;
+    border-color: black;
+    width: 50%;
+    height: 500px;
+    border: 1px solid black;
+    float: right;
+    box-sizing: border-box;
+    
+}
+
+
