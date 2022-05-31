@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Signup</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        </head>
+    <body>
+        <h1>Welcome to Dayeon shop<span class = "title"></span></h1>
+        <div>SignUpPage
+            <button class="button" type="button" onclick="location.href='login.html'">Login</button> 
+        <form method = "GET" autocomplete ="on" action = "login.html">
+            <p><label>Name: 
+                <input type = "text" name = "Name" placeholder="Name" required/></label></p>
+            <p><label>birth:
+                <input type= "date" name =  "date" type="date" required/></label></p>
+            <p><label>Email:
+                <input type="email" name = "email" placeholder="name@domain.com" required/></label></p>
+            <p><label>Grade:
+                <input type="number" name = "grade" min="1" max="4" step = "1" value="2" required/></label></p>
+            <p><label>Tel: 
+                <input type= "tel" name = "tel" placeholder="(###)-####-####" pattern = "\(\d{3}\)-\d{4}-\d{4}" required/></label></p>
+            <p><label>UserId:
+                <input type="text" name = "Id" placeholder="Input Id" autofocus required/></label></p>
+            <p><label>Password:
+                <input type="password" name = "password" placeholder="Input Password" required/></label></p>
+            <p><label>PasswordCheck:
+                <input type="password" name = "passwordcheck" placeholder="Input Password again" required/></label></p>
+            <div><input type = "submit" value="Submit" class="button2"/>
+                <input type = "reset" value="Clear" class="button2"/></div>            
+        </form>   
+    </body>
+</html>
