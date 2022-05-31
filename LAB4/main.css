@@ -16,6 +16,9 @@ p, div, section, header{
     margin-bottom: 10px;
     text-align:left;
 }
+.clock, .color{
+    float: right;
+}
 .button{
     font-size: 1em;
     font-family: 'Times New Roman', Times, serif;
@@ -95,7 +98,7 @@ p, div, section, header{
      .flexible-container{
      	flex-direction: column;
         align-items: center;
-        flex-wrap: wrap}
+        flex-wrap: wrap;}
     h2{
         text-align: center;
     }
