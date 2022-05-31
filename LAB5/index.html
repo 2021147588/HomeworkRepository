@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dayeon's Yacht Shop</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body onload=ShowList();>
+        <header>
+            <h1 class="title">Hello, it's Dayeon's Yacht Shop</h1>
+        </header>
+        <!--navbar-->
+        <div class="router-container">
+            <div class="item">MainPage</div>
+            <div class="item"><a href="login.html">Login</a></div> 
+            <div class="item"><a href="signup.html">SignUp</a></div>
+        </div>
+        <!--maincontents-->
+        <div class="container">
+            <div class="selection-container">
+                <div class="category-title">Choose a Category</div>
+                <select class="dropdown" onchange="ShowList(value)">
+                    <option value="all">All</option>
+                    <option value="dinghy">Dinghy</option>
+                    <option value="keelboat">Keel boat</option>
+                </select>
+                <div>
+                    <div>Enter the search item:</div>
+                    <input type = "text" id = "search" onchange = ShowList(value)>
+                    <button class="button2">Search</button>
+                </div>
+            </div>
+            <div id = "content-box" class="detail-container"> 
+                </div>
+
+        <script>
+            function ShowList(name="all"){
+                fetch('product.json')
+                    .then((response) => response.json())
+                    .then((data) => {
+                        document.getElementById("content-box").innerHTML = " ";
+                        for(var i=0; i<data.length; i++){
+                            if (data[i].category == name || name == "all") {
+                                console.log(data[i]);
+                                var content =`<div id = "content-box">
+                                <button class="button2" onclick = "document.getElementById('${data[i].name}').innerHTML = '${data[i].name}'+'<br>'
+                                    +'${data[i].text}'+'<br>'+'${data[i].price}'">detail</button>
+                                <h5 id = "${data[i].name}"></h5>
+                                <img src="${data[i].image}"/></div>`
+                                document.getElementById("content-box").innerHTML+= content }}
+                    })}
+  
+
+  
+
+        </script>
+        
+        
+        <script src="index.js"></script>
+
+    </body>
+
+</html>
+
